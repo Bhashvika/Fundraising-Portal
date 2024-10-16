@@ -1,0 +1,124 @@
+/* Loginsignup.css */
+.login-popup {
+    position: fixed; /* Fixed positioning for overlay */
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+    place-items: center; /* Centers the popup */
+}
+
+.login-popup-container { /* Maximum width for larger screens */
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Maximum width for larger screens */
+    color: #808080;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(59, 73, 20);
+    font-size: 20px;
+}
+
+.login-popup-title img {
+    width: 20px; /* Adjusted for better visibility */
+    cursor: pointer;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #9c9cc9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: aliceblue;
+    background-color: rgb(14, 63, 36);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+    font-size: 18px;
+}
+
+.login-popup-condition input {
+    margin-top: 4px;
+}
+
+.login-popup p span {
+    color: rgb(45, 64, 20);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 576px) {
+    .login-popup-container {
+        width: 95%; /* Full width on mobile */
+        padding: 15px; /* Reduced padding for mobile */
+    }
+
+    .login-popup-title {
+        font-size: 18px; /* Smaller title on mobile */
+    }
+
+    .login-popup-inputs input {
+        padding: 8px; /* Smaller input padding on mobile */
+    }
+
+    .login-popup-container button {
+        padding: 8px; /* Smaller button padding on mobile */
+    }
+}
+
+/* Additional Media Query for screens 480px or less */
+@media (max-width: 480px) {
+    .login-popup-container {
+        width: 95%; /* Full width on very small screens */
+        padding: 10px; /* Adjusted padding for very small screens */
+    }
+
+    .login-popup-title {
+        font-size: 16px; /* Further reduced title size */
+    }
+
+    .login-popup-inputs input {
+        padding: 6px; /* Smaller input padding for very small screens */
+        font-size: 12px; /* Smaller input text size */
+    }
+
+    .login-popup-container button {
+        padding: 6px; /* Smaller button padding for very small screens */
+        font-size: 14px; /* Smaller button text size */
+    }
+
+    .login-popup-condition {
+        font-size: 16px; /* Smaller font size for condition */
+    }
+}

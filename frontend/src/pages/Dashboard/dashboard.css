@@ -1,0 +1,307 @@
+/* Adjusted CSS for the Dashboard */
+
+/* Container Styling */
+.dashboard-container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+/* Header Styling */
+.dashboard-header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 900px; /* Increased max-width for a larger image */
+    height: auto;
+}
+
+.dashboard-image {
+    width: 100%;
+    max-width: 700px; /* Increase image size */
+    height: auto;
+    max-height: 400px; /* Increase max height */
+    object-fit: cover;
+}
+
+.dashboard-header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 80%; /* Increased width for better text accommodation */
+}
+
+.dashboard-header-text h2 {
+    color: red;
+    font-size: 26px;
+    font-style: oblique;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-header-text p {
+    font-size: 17px;
+    font-style: oblique;
+    margin: 10px 0 0 0;
+}
+
+/* Progress Section Styling */
+.progress-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.progress-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+    stroke: #e6e6e6;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-ring-fill {
+    stroke: #76c7c0;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+/* Center the Goal Achieved Text */
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; /* Adjusted for better readability */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    line-height: 1.2; /* Ensures text doesn't overlap */
+}
+
+.progress-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* User Dashboard Content */
+.user-dashboard-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 50px;
+    gap:20px;
+}
+
+.right-side-content {
+    width: 500px;
+    padding: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.buttons-container {
+    border-top: 1px solid rgb(46, 45, 42);
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.reward-button,
+.copy-link-button {
+    width: 26vh;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ec4848;
+    transition: background 0.2s;
+}
+
+.reward-button:hover,
+.copy-link-button:hover {
+    background-color: #ddd;
+}
+
+.unlock-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.time-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.extend-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #d9534f;
+    color: white;
+    transition: background 0.2s;
+}
+
+.extend-button:hover {
+    background-color: #c9302c;
+}
+
+.reference-code p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.start-here-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #337ab7;
+    color: white;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.start-here-button:hover {
+    background-color: #286090;
+}
+
+/* WhatsApp Share Button */
+.whatsapp-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.whatsapp-share-button {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30vh;
+}
+
+.whatsapp-share-button:hover {
+    background-color: #20b355;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        display: block;
+    }
+
+    .dashboard-image {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .user-dashboard-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .right-side-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+        border-top: none;
+    }
+
+    .reward-button,
+    .copy-link-button {
+        width: 100%;
+    }
+
+    .progress-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .progress-text {
+        font-size: 1.2rem;
+    }
+
+    .dashboard-header-text {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Smaller Mobile Screens */
+@media (max-width: 480px) {
+    .dashboard-header-text h2 {
+        font-size: 20px;
+    }
+
+    .dashboard-image {
+        max-width: 100%;
+        max-height: 180px;
+    }
+
+    .dashboard-header-text p {
+        font-size: 14px;
+    }
+    .progress-ring{
+        display: none;
+    }
+    .progress-circle {
+        width: 100px;
+        height: 100px;
+    }
+    .progress-text {
+        font-size: 4rem;
+        margin-left: -80px;
+    }
+
+    .reward-button,
+    .copy-link-button,
+    .start-here-button,
+    .extend-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .unlock-text {
+        font-size: 12px;
+    }
+
+    .buttons-container {
+        border-top: none;
+    }
+}

@@ -1,0 +1,69 @@
+/* Mainpage.css */
+
+.mainpage-container {
+    position: relative; /* Make it the reference point for absolute positioning */
+    display: flex;
+    flex-direction: row; /* Default to row on larger screens */
+    align-items: flex-start; /* Align content to the top */
+    height: 100vh; /* Ensure the height is consistent */
+}
+
+.navbar {
+    position: relative; /* This will be the base container */
+    z-index: 1; /* Ensure it is below the second container */
+    width: 100%; /* Full width */
+}
+
+.main-content {
+    position: absolute; /* Position it over the first container */
+    top: 0; /* Adjust to sit where needed */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 5px;
+    flex: 1; /* Ensure the main content takes available space */
+    z-index: 2;
+    margin-top: 150px; /* Ensure it appears above the first container */
+}
+
+h1 {
+    font-size: 2rem; /* Size of the main heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+p {
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .mainpage-container {
+        flex-direction: column; /* Stack elements on smaller screens */
+    }
+
+    .main-content {
+        position: absolute; /* Remains absolute */
+        top: 0; /* Adjust to stay over the first container */
+        left: 0; /* Ensure it stretches properly */
+        right: 0;
+        padding: 10px; /* Reduce padding */
+    }
+}
+
+/* When screen size is 480px or less */
+@media (max-width: 480px) {
+    .mainpage-container {
+        flex-direction: column;
+        margin-top: -240px; /* Stack Navbar and Main Content vertically */
+    }
+
+    .main-content {
+        position: absolute;
+        margin-top: 480px;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px; /* Reduce padding */
+    }
+}

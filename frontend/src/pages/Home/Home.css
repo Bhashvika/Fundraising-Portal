@@ -1,0 +1,104 @@
+.body {
+  background-image: url('../../assets/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* Change to 'cover' to fill the entire area */
+  height: 100vh; /* Ensures it covers the full viewport height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2.5rem; /* Adjust size for larger screens */
+  font-weight: bold; /* Make the font bold */
+  color: #205e71; /* Darker color for better readability */
+  margin-bottom: 15px;
+  margin-top: -150px; /* Add some space below the heading */
+}
+
+.container p {
+  padding-left: 5%; /* Make padding responsive */
+  padding-right: 5%; /* Make padding responsive */
+  font-size: 1.4rem; /* Slightly larger font */
+  color: #172a0a; /* Softer color */
+  line-height: 1.5; /* Improve readability */
+}
+
+.container button {
+  margin-top: 20px;
+  padding: 10px 20px; /* Adjust padding for better appearance */
+  background-color: #f1f0ac; /* Button color */
+  color: rgb(38, 34, 34); /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  body {
+      background-size: cover; /* Adjusts background for tablet and mobile devices */
+      background-position: top; /* Better positioning on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+      padding-top: 20vh; /* Adjust padding for mobile */
+  }
+
+  .container h1 {
+      font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .container p {
+      padding-left: 10%; /* Adjust padding for mobile */
+      padding-right: 10%; /* Adjust padding for mobile */
+      font-size: 1rem; /* Slightly smaller font */
+  }
+
+  .container button {
+      padding: 8px 16px; /* Smaller padding on mobile */
+      font-size: 1rem; /* Adjust font size */
+  }
+}
+
+/* Additional Media Query for screens 480px or less */
+@media (max-width: 480px) {
+   .body{
+    background-image: url('../../assets//bgsmall.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+  .container {
+      padding-top: 15vh; /* Adjust padding for very small screens */
+  }
+
+  .container h1 {
+      font-size: 1.75rem; /* Smaller font size for very small screens */
+      margin-top: -400px; /* Adjust margin for better spacing */
+  }
+
+  .container p {
+      padding-left: 8%; /* Slightly adjusted padding */
+      padding-right: 8%; /* Slightly adjusted padding */
+      font-size: 0.9rem; /* Smaller font size for better fit */
+  }
+
+  .container button {
+      padding: 6px 12px; /* Smaller padding for buttons */
+      font-size: 0.9rem; /* Smaller button text size */
+  }
+}

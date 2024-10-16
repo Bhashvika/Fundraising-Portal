@@ -1,0 +1,104 @@
+/* Navbar Container */
+.navbar {
+    display: flex; /* Align items in a single row */
+    justify-content: space-between; /* Space out the logo, sidebar, and profile */
+    align-items: center; /* Center vertically */
+    padding: 10px 20px; /* Add some padding */
+    background-color: #f8f9fa; /* Light background */
+    width: 100%;
+    position: relative; /* Ensure relative positioning */
+    height: 70px; /* Set a consistent height */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 10;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px; /* Adjust the logo height */
+}
+
+/* Sidebar Styling */
+.sidebar ul {
+    display: flex; /* Arrange sidebar items in a row */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    padding-right: 10px;
+}
+
+.sidebar li {
+    margin: 0 15px; /* Space between sidebar links */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Medium weight */
+}
+
+.link {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Black text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Right Profile Section */
+.rightprofile {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Show pointer on hover */
+    position: relative; /* Relative positioning */
+}
+
+.rightprofile img {
+    height: 40px; /* Adjust profile image size */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and name */
+}
+
+.dropdown {
+    position: absolute;
+    top: 60px; /* Position below the profile image */
+    right: 0; /* Align to the right */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Responsive Styling for Screens 480px or less */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: row; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Adjust padding */
+        height: auto;
+        margin-top: 240px; /* Adjust height */
+    }
+
+    .sidebar ul {
+        flex-direction: column; /* Stack sidebar links vertically */
+        width: 100%; /* Full width */
+        padding: 0; /* Adjust padding */
+    }
+
+    .sidebar li {
+        margin: 10px 0; /* Space between links */
+    }
+
+    .rightprofile {
+        width: 100%; /* Full width */
+        justify-content: flex-start; /* Align to start */
+        padding-top: 10px; /* Add padding at the top */
+    }
+
+    .rightprofile img {
+        height: 35px; /* Smaller image for smaller screens */
+    }
+
+    .dropdown {
+        top: 50px; /* Adjust dropdown positioning */
+    }
+}
